@@ -107,3 +107,97 @@ for (i in person){
 for (i in person){
     console.log(i + ": " + person[i]);
 }
+
+
+// MATH Object = a built-in object that provides 
+//          a collection of properties & methods
+
+let x = 3.99;
+let y = 4;
+let z = 5.2;
+
+console.log(Math.PI); // Gives value of PI. 3.14159265...
+console.log(Math.min(x, y, z)); // find minimum
+console.log(Math.max(x, y, z)); // find maximum
+console.log(Math.sqrt(y)); // find square root
+console.log(Math.round(z)); // general round
+console.log(Math.floor(x)); // round down
+console.log(Math.ceil(x)); // round up
+console.log(Math.trunc(z)); // remove decimal portion
+console.log(Math.pow(x,y)) // x to the power of y
+console.log(Math.sign(0)); // returns whether x is NEGATIVE, NULL, or POSITIVE.
+console.log(Math.random); // Returns a random number between 0 (inclusive), and 1 (exclusive)
+console.log(Math.random() * 10) // Returns a random integer from 0-9.
+console.log(Math.random() * 11) // Returns a random integer from 0-10.
+console.log(Math.random() * 101) // Returns a random integer from 0 to 100.
+
+let min = 1;
+let max = 100;
+
+
+//This JS function always returns a random number 
+//              between min (included) and max (excluded)
+// Returns random number that could be 1-99.
+function getRndIntegerExclusive(min, max){
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+// This JS function always returns a random number
+// between min and max (both included).
+
+function getRndIntegerInclusive(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
+
+
+
+
+// SPREAD OPERATOR = ... allows an iterable items such as an 
+//                      [array] or "string" to be expanded into separate elements.
+//                                                          (unpacks the elements)
+
+
+
+let numbers = [1,2,3,4,5];
+
+let maximum = Math.max(numbers) // cannot pass array to Math.max. Returns NaN.
+let newMaximum = Math.max(...numbers) // use spread operator on numbers
+
+console.log(maximum)
+console.log(newMaximum)
+
+let minimum = Math.min(...numbers);
+console.log(minimum);
+
+// Spread strings
+
+let username = "Mr. Gardner"
+let letters = [...username];
+
+console.log(letters) // unpacks the string into individual letters
+
+let assembledUsername = [...username].join("-"); // All one string, but dash between each letter.
+
+// Combining arrays with spread operator
+
+let fruitsAgain = ["apple", "orange", "banana"];
+let vegetables = ["carrots", "peppers", "broccoli"];
+
+let foods = [...fruitsAgain, ...vegetables]; // combines fruitsAgain + vegetables
+foods = [...fruitsAgain, ...vegetables, "eggs", "milk"]; // combines fruitsAgain + vegetables
+
+
+
+console.log(foods);
+
+
+
+
+
+
+
+
+
+
