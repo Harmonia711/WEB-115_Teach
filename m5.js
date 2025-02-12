@@ -1,6 +1,6 @@
 // 1D Array = a variable like structure that can hold more than 1 value.
 // 1D Array = a list from Python 
-
+/*
 let fruits = ["apple", "orange", "banana"];
 
 // fruits[3] = "coconut"; // Add to new [3] of the array
@@ -107,28 +107,40 @@ for (i in person){
 for (i in person){
     console.log(i + ": " + person[i]);
 }
-
+*/
 
 // MATH Object = a built-in object that provides 
 //          a collection of properties & methods
 
-let x = 3.99;
-let y = 4;
-let z = 5.2;
+let x = 2;
+let y = 3;
+let z = 8.2;
+
 
 console.log(Math.PI); // Gives value of PI. 3.14159265...
-console.log(Math.min(x, y, z)); // find minimum
-console.log(Math.max(x, y, z)); // find maximum
+console.log("The minimum is: " + Math.min(x, y, z)); 
+// find minimum
+console.log("The maximum is: " + Math.max(x, y, z)); 
+// find maximum
+
+
 console.log(Math.sqrt(y)); // find square root
 console.log(Math.round(z)); // general round
 console.log(Math.floor(x)); // round down
 console.log(Math.ceil(x)); // round up
+
+
+
+
 console.log(Math.trunc(z)); // remove decimal portion
 console.log(Math.pow(x,y)) // x to the power of y
-console.log(Math.sign(0)); // returns whether x is NEGATIVE, NULL, or POSITIVE.
+
+console.log(Math.sign(5)); 
+// returns whether x is NEGATIVE (-1), NULL (0), or POSITIVE (1).
+
 console.log(Math.random); // Returns a random number between 0 (inclusive), and 1 (exclusive)
-console.log(Math.random() * 10) // Returns a random integer from 0-9.
-console.log(Math.random() * 11) // Returns a random integer from 0-10.
+console.log(Math.random() * 10) // Returns a random number from 0-9.
+console.log(Math.random() * 11) // Returns a random number from 0-10.
 console.log(Math.random() * 101) // Returns a random integer from 0 to 100.
 
 let min = 1;
@@ -137,33 +149,35 @@ let max = 100;
 
 //This JS function always returns a random number 
 //              between min (included) and max (excluded)
+
 // Returns random number that could be 1-99.
 function getRndIntegerExclusive(min, max){
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
 // This JS function always returns a random number
-// between min and max (both included).
+// between min and max (both included) (1-100).
 
 function getRndIntegerInclusive(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
 
 
-
-
 // SPREAD OPERATOR = ... allows an iterable items such as an 
-//                      [array] or "string" to be expanded into separate elements.
-//                                                          (unpacks the elements)
+//[array] or "string" to be expanded into separate elements.
+//                             (unpacks the elements)
 
 
 
 let numbers = [1,2,3,4,5];
 
-let maximum = Math.max(numbers) // cannot pass array to Math.max. Returns NaN.
-let newMaximum = Math.max(...numbers) // use spread operator on numbers
+// cannot pass array to Math.max. Returns NaN.
+let maximum = Math.max(numbers) 
+
+// use spread operator on [numbers] 
+let newMaximum = Math.max(...numbers) 
 
 console.log(maximum)
 console.log(newMaximum)
@@ -175,29 +189,30 @@ console.log(minimum);
 
 let username = "Mr. Gardner"
 let letters = [...username];
+console.log(username)
 
 console.log(letters) // unpacks the string into individual letters
 
-let assembledUsername = [...username].join("-"); // All one string, but dash between each letter.
+
+// All one string, but dash between each letter.
+let assembledUsername = [...username].join("-");
+console.log(assembledUsername)
+
+
+
+
 
 // Combining arrays with spread operator
 
 let fruitsAgain = ["apple", "orange", "banana"];
+
 let vegetables = ["carrots", "peppers", "broccoli"];
 
-let foods = [...fruitsAgain, ...vegetables]; // combines fruitsAgain + vegetables
-foods = [...fruitsAgain, ...vegetables, "eggs", "milk"]; // combines fruitsAgain + vegetables
+// combines fruitsAgain + vegetables
+let foods = [...fruitsAgain, ...vegetables];
+console.log(foods)
 
-
+// combines fruitsAgain + vegetables
+foods = [...fruitsAgain, ...vegetables, "eggs", "milk"];
 
 console.log(foods);
-
-
-
-
-
-
-
-
-
-
