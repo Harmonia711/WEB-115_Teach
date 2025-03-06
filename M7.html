@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link href="M7.css" rel="stylesheet">
+    <script src="M7.js" defer></script>
+</head>
+<body>
+    <!-- This is for DOM Traversal -->
+    <main id="main">Main Element</main><br>
+    <div class="grandparent">grandma/grandpa
+        <section class="parent">Section 1 (parent 1)
+            <p class="child">Section 1 Paragraph 1 (childOne)</p>
+            <p class="child">Section 1 Paragraph 2 (childTwo)</p>
+        </section>
+        <section class="parent">Section 2 (parent 2)
+            <p class="child">Section 2 Paragraph 1</p>
+            <p class="child">Section 2 Paragraph 2</p>
+        </section>
+    <br>
+    </div>
+    <!-- This is for .replaceChild() -->
+    <ul id="myList">
+        <li>HTML</li> <!--[0]-->
+        <li>CSS</li> <!--[1]-->
+        <li>JavaScript</li> <!--[2]-->
+    </ul>
+    <script>
+        const myList = document.getElementById("myList")
+        console.log(myList)
+        const cssListItem = myList.children[1]; // Grab CSS <li>
+        console.log(cssListItem)
+
+        // Create a new element / node
+        const newListElement = document.createElement("li") // Create new list item
+        newListElement.textContent = "Python"; // Set text content of new <li> to "Python"
+        // .replaceChild syntax = .replaceChild(newchild, oldchild)
+        myList.replaceChild(newListElement, cssListItem)    
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.grandparent {
+    border: 4px solid black;
+    padding: 20px;
+    width: 500px;
+    margin: 20px auto;
+    position: relative; /* For absolute positioning of children */
+  }
+  
+  .parent {
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 10px;
+    position: relative; /* For absolute positioning of children */
+  }
+  
+  .child {
+    border: 1px solid green;
+    padding: 5px;
+    margin: 5px;
+    background-color: lightgreen; /* Optional: to make children more visible */
+  }
+  
+  .grandparent::before {
+    content: "Grandparent";
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 2px 5px;
+    font-size: 0.8em;
+  }
+  
+  /* .parent:nth-child(1)::before {
+    content: "Parent 1";
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    background-color: white;
+    padding: 2px 5px;
+    font-size: 0.7em;
+  }
+  
+  .parent:nth-child(2)::before {
+    content: "Parent 2";
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    background-color: white;
+    padding: 2px 5px;
+    font-size: 0.7em;
+  }
+   */
+  /* .child:nth-child(1)::before {
+    content: "Child 1";
+    position: absolute;
+    top: -8px;
+    left: 2px;
+    background-color: lightgreen;
+    padding: 2px 3px;
+    font-size: 0.6em;
+  }
+  
+  .child:nth-child(2)::before {
+    content: "Child 2";
+    position: absolute;
+    top: -8px;
+    left: 2px;
+    background-color: lightgreen;
+    padding: 2px 3px;
+    font-size: 0.6em;
+  } */
