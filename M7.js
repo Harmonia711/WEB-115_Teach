@@ -138,3 +138,20 @@ changeColor(childTwo, "white")
 childOneAgain = childTwo.previousElementSibling
 console.log(childOneAgain)
 changeColor(childOneAgain, "lightblue")
+
+
+
+
+let firstItem = document.getElementById("list").firstChild;
+console.log(firstItem.textContent);
+
+let elementToRemove = document.getElementById("removeMe");
+elementToRemove.parentElement.removeChild (elementToRemove);
+
+let newParagraph = document.createElement("p");
+newParagraph.textContent = "This is a new paragraph.";
+document.body.appendChild (newParagraph);
+
+let targetElement = document.getElementById("target");
+let newNode = document.createElement("li");
+targetElement.parentElement.__________ (newNode, targetElement);
